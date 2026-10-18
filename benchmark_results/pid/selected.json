@@ -1,0 +1,46 @@
+{
+  "config": {
+    "shoulder": {
+      "kp": 5.25,
+      "ki": 0,
+      "kd": 0.1
+    },
+    "elbow": {
+      "kp": 5.25,
+      "ki": 0,
+      "kd": 0.1
+    },
+    "derivative_tau_s": 0.04,
+    "integral_bound_deg_s": 100.0,
+    "recovery_kp": 2.5
+  },
+  "training": {
+    "candidate": "local_p5.25_i0_d0.1_t0.04",
+    "stage": "local",
+    "kp": 5.25,
+    "ki": 0,
+    "kd": 0.1,
+    "tau": 0.04,
+    "safety_violations": 0,
+    "unsettled_segments": 0,
+    "max_step_overshoot_deg": 0.0,
+    "trials": 54,
+    "collisions": 0,
+    "worst_clearance_mm": 46.01470508735444,
+    "median_clearance_mm": 346.6418527965043,
+    "false_triggers": 2,
+    "non_threats": 24,
+    "missed": 0,
+    "late": 0,
+    "latency_median_ms": 565.4011188800123,
+    "tracking_rmse_deg": 15.505050232483237,
+    "peak_error_deg": 104.55091013583649,
+    "saturation_reflex_fraction": 0.559782608695652,
+    "saturation_tracking_fraction": 0.08331655913797413,
+    "request_applied_rms_deg_s": 29.382736416263878,
+    "mean_reflex_active_s": 0.6133333333333337,
+    "joint_stop_count": 174,
+    "i_rms_deg_s": 0.0,
+    "d_rms_deg_s": 3.680406871598455
+  }
+}

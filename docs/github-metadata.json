@@ -1,0 +1,16 @@
+{
+  "name": "neuroreflex",
+  "description": "Collision-avoidance reflexes for robotic arms: geometric threat prediction, hysteretic safety logic, classical and Lava CPU spiking control, and reproducible simulation.",
+  "topics": [
+    "robotics",
+    "neuromorphic-computing",
+    "spiking-neural-networks",
+    "collision-avoidance",
+    "robot-control",
+    "lava",
+    "simulation"
+  ],
+  "visibility": "public",
+  "license": "No license grant",
+  "owner": "cihankezer"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "nef-spiking-reference",
+  "status": "seed17_D_signal_calibrated",
+  "selection": "Minimum seed-17 joint-pooled D-contribution RMSE; no safety outcomes used.",
+  "training_seed": 17,
+  "validation_seeds": [
+    23,
+    41
+  ],
+  "config": {
+    "neurons_per_ensemble": 250,
+    "seed": 2026,
+    "neural_dt_s": 0.001,
+    "membrane_tau_s": 0.005,
+    "error_radius_deg": [
+      140.0,
+      100.0
+    ],
+    "output_radius_deg_s": [
+      1250.0,
+      900.0
+    ],
+    "intercept_range": [
+      -0.9,
+      0.9
+    ],
+    "max_rate_range_hz": [
+      120.0,
+      360.0
+    ],
+    "decoder_regularization": 0.001,
+    "p_synapse_tau_s": 0.005,
+    "output_synapse_tau_s": 0.01,
+    "tau_short_s": 0.01,
+    "tau_long_s": 0.04,
+    "derivative_scale_per_s": 32.59383031410836
+  },
+  "conventional_reference_sha256": "868a10abc369d99dc787a9b6d63dd4499c17eed0d0231e8b4b949da62a574242"
+}

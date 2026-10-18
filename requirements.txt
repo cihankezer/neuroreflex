@@ -1,0 +1,2 @@
+# Portable CPU simulation. Exact validated environment: requirements-validated.txt.
+numpy>=1.26.4

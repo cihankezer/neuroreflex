@@ -1,0 +1,5 @@
+# Validated in the clean CPython 3.13.6 environment on Windows.
+numpy==2.5.4
+pytest==9.1.1
+matplotlib==3.11.2
+Pillow==13.0.0

@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv*/
+build/
+dist/
+.spiking-runtime/
+.cache-lava/
+_private_review/
+.env
+.env.*
+*.aedat4
+*.npz
+*.jsonl
+# Default experiment outputs; curated evidence is explicitly reviewed.
+/dynamic_metrics.csv
+/controller_metrics.csv
+/outputs/

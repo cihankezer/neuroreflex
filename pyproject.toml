@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuroreflex"
+version = "0.1.0"
+description = "Simulation-based collision-avoidance reflexes for robotic arms"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26.4"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+visualization = ["matplotlib>=3.7", "Pillow>=9"]
+
+[project.scripts]
+neuroreflex-benchmark = "neuroreflex.cli:main"
+
+[tool.setuptools]
+packages = ["neuroreflex", "neuromorphic_lava"]
+py-modules = ["simulation_core", "perception", "trajectories", "threat_gate", "reflex_release", "diagnostics", "dynamic_metrics", "performance_metrics", "release_metrics", "motor_controller", "motor_metrics", "state_activation_metrics", "spiking_config", "spiking_controller", "nef_population", "lava_nef", "run_dynamic_cases", "run_static_cases", "perception_adapter", "visual_mapping", "visual_reflex_policy", "visual_reflex_policy_legacy", "spiking_comparison_metrics", "run_gate_ablation", "run_release_ablation", "run_robustness_check", "pid_baseline", "run_pid_study", "pid_report", "pid_final_report", "run_pid_final_validation", "spiking_report", "run_spiking_study"]
+
+[tool.setuptools.package-data]
+neuroreflex = ["configs/*.json", "configs/*.xlsx"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

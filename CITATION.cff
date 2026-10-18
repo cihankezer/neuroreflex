@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite this software. Citation does not confer a license."
+title: "NeuroReflex: Event-Driven Neuromorphic Collision Avoidance for Robotic Arms"
+authors:
+  - family-names: "ge58puv"
+    website: "https://github.com/cihankezer"
+type: software
+version: 0.1.0
+repository-code: "https://github.com/cihankezer/neuroreflex"

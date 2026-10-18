@@ -1,0 +1,14 @@
+{
+  "name": "conventional-reference",
+  "purpose": "Frozen conventional neuromorphic reference for subsequent spiking PID/PD comparison",
+  "status": "frozen",
+  "control_dt_s": 0.020,
+  "config": {
+    "shoulder": {"kp": 5.25, "ki": 0.0, "kd": 0.1},
+    "elbow": {"kp": 5.25, "ki": 0.0, "kd": 0.1},
+    "derivative_tau_s": 0.04,
+    "integral_bound_deg_s": 100.0,
+    "recovery_kp": 2.5
+  },
+  "freeze_policy": "Conventional tuning is complete. Preserve these gains and the P/I/D structure for subsequent spiking comparisons."
+}

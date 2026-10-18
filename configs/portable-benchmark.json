@@ -1,0 +1,7 @@
+{
+  "seed": 42, "trials_per_condition": 24, "speed_range_m_s": [0.3, 2.0],
+  "control_dt_s": 0.02, "geometry_dt_s": 0.002, "post_encounter_time_s": 0.5,
+  "noise": {"position_sigma_m": 0.01, "ttc_relative_sigma": 0.1, "latency_s": 0.02, "dropout_probability": 0.05},
+  "runner": "scripts/run_benchmarks.py",
+  "note": "Human-readable experiment specification; the runner manifest records authoritative CLI arguments."
+}
