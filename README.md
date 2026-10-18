@@ -147,10 +147,6 @@ Developed during the **Munich Neuromorphic Hackathon 2026**, inspired by the **N
 - Zaidel, Shalumov, Volinski, Supic, and Tsur (2021). [Neuromorphic NEF-Based Inverse Kinematics and PID Control](https://doi.org/10.3389/fnbot.2021.631159). Background reading; its hardware results are not NeuroReflex results.
 - [Lava execution documentation](https://lava-nc.org/lava/notebooks/in_depth/tutorial04_execution.html). Runtime terminology and CPU/hardware execution distinction.
 
-## Contributors and Attribution
-
-This release contains **ge58puv**'s personal contribution, published by [cihankezer](https://github.com/cihankezer). It originated in a collaborative hackathon project. Teammates' perception implementations are excluded; this repository does not claim authorship of that work. The shared `looming_arm_3d.py` is not redistributed. Third-party libraries retain their respective licenses. [Attribution and exclusions](docs/attribution.md).
-
 ## License
 
 **No license grant.** The author has chosen not to assign an open-source license to this code. Public availability does not provide a general reuse or redistribution license. No `LICENSE` file is included. See [CITATION.cff](CITATION.cff) for citation metadata.
