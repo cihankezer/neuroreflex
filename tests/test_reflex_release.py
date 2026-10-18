@@ -1,3 +1,4 @@
+from trace_fingerprints import assert_reference_trace
 from dataclasses import asdict, replace
 import hashlib
 import json
@@ -175,9 +176,7 @@ class ReleaseIntegrationTests(unittest.TestCase):
                             self.assertEqual(asdict(r.metrics), old["metrics"])
                             self.assertEqual(asdict(r.diagnostics), old["diagnostics"])
                             ticks = [{k: v for k, v in t.items() if k in old["tick_fields"]} for t in r.ticks]
-                            digest = hashlib.sha256(json.dumps(ticks, sort_keys=True,
-                                                              separators=(',', ':')).encode()).hexdigest()
-                            self.assertEqual(digest, old["ticks_sha256"])
+                            assert_reference_trace(self, ticks, old["ticks_sha256"])
 
     def test_first_activation_timing_unchanged_clean_and_noisy(self):
         for noisy in (False, True):

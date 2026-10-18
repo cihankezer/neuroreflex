@@ -1,3 +1,4 @@
+from trace_fingerprints import assert_reference_trace
 from dataclasses import asdict, replace
 import hashlib
 import json
@@ -131,8 +132,7 @@ class QuickRobustnessTests(unittest.TestCase):
                 self.assertEqual(asdict(result.metrics),expected['metrics'])
                 self.assertEqual(asdict(result.diagnostics),expected['diagnostics'])
                 self.assertEqual(asdict(result.release_metrics),expected['release_metrics'])
-                self.assertEqual(hashlib.sha256(json.dumps(result.ticks,sort_keys=True,
-                    separators=(',',':')).encode()).hexdigest(),expected['ticks_sha256'])
+                assert_reference_trace(self, result.ticks, expected["ticks_sha256"])
 
     def test_invalid_new_corruption_parameters_are_rejected(self):
         for kwargs in ({'velocity_sigma_m_s':-.1},{'velocity_scale':0},

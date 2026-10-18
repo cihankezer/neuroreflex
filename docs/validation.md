@@ -37,3 +37,11 @@ A fingerprint check covered **1,199 pre-existing source files**, including track
 Only local path metadata was redacted from the copied historical static CSV; all numerical trial and summary values are unchanged. Fresh benchmark runs explicitly record relative preset and output paths. Original unredacted artifacts remain privately preserved. Text files use LF across platforms to preserve byte-based regression checks.
 
 The exact staged 97-file release was exported without private files or Git history: 153 tests passed, 16 Lava tests skipped, and the headless demo succeeded. CI uses Windows runners because historical exact-fingerprint fixtures were recorded on Windows; other operating systems remain unverified.
+
+## Cross-version CI finding and correction
+
+The first hosted CI run passed on Python 3.13 but Python 3.10 rejected raw historical trace hashes. A local paired run had identical encounter metrics and controller/state decisions; ten passive diagnostic float values in a 92-tick example differed at roughly 1e-16. Runtime-dependent floating-point summation makes byte-identical JSON an inappropriate cross-version requirement.
+
+Original raw fixtures and hashes remain unchanged and are still strictly checked on their CPython 3.13/Windows reference family. A supplementary fixture holds 324 trace fingerprints with finite floats rounded to nine decimal places. Branch decisions, labels, counts, structure, and original encounter/diagnostic summaries remain exact; seeded within-runtime determinism tests remain active. The supplementary fingerprints were derived only after matching every original raw trace on the reference runtime. `python scripts/generate_trace_fingerprints.py` reproduces that derivation on the reference family and refuses changed raw outcomes.
+
+The affected Python 3.10 robustness and release suites passed locally (11 and 25 tests respectively). This changes validation portability, not runtime control or published benchmark values. The workflow also uses current Node 24-compatible action versions.
